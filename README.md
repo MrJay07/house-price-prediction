@@ -61,15 +61,17 @@ The aim of this project is to develop a **House Price Prediction Model** that:
    uvicorn notebooks.main:app --reload
    ```
 5. Access the API
-  Open your browser and go to http://127.0.0.1:8000 to see the home endpoint.
-  Visit http://127.0.0.1:8000/docs to access the Swagger UI for testing your API.
+     ```
+     Open your browser and go to http://127.0.0.1:8000 to see the home endpoint.
+     Visit http://127.0.0.1:8000/docs to access the Swagger UI for testing your API.
+     ```
 4. Test API using CURL or Postman::
-   ```bash
+```bash
    curl -X 'POST' \
   'http://127.0.0.1:8000/predict' \
   -H 'Content-Type: application/json' \
   -d '{"MedInc":3.5,"HouseAge":15,"AveRooms":5,"AveBedrms":1.0,"Population":1500,"AveOccup":3.0,"Latitude":34.0,"Longitude":-118.0}'
-   ```
+```
 5. To run the application using Docker:
    ```bash
    docker build -t house-price-prediction .
